@@ -35,7 +35,22 @@ function move(element) {
         element.style.bottom = y + 'px'
         }
 
-        
+        setInterval(function (){
+        if(direction === 'west') {
+            x = x - 1 
+        }
+        if(direction === 'north') {
+            y = y + 1 
+        }
+        if(direction === 'east') {
+            x = x + 1 
+        }
+        if(direction === 'south') {
+            y = y - 1 
+        }
+    character.style.left = x + 'px'
+    character.style.bottom = y + 'px'
+}, 1)
     }
 
     return {
